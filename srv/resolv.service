@@ -1,0 +1,9 @@
+[Unit]
+Description=srv_idles
+After=multi-user.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/dotnet /srv/srvapp/sppong.dll
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
